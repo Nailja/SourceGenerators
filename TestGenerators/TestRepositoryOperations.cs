@@ -55,6 +55,7 @@ namespace TestGenerators
             };
 
             _repo.Insert(newData);
+            Console.WriteLine("New line was added");
         }
 
         public void UpdateOperation(int id)
@@ -73,11 +74,13 @@ namespace TestGenerators
             };
 
             _repo.Update(newData, id);
+            Console.WriteLine("Line with ID = " + id + " was updated");
         }
 
         public void DeleteOperation(int id)
         {
             _repo.Delete(id);
+            Console.WriteLine("Line with ID = " + id + " was deleted");
         }
     }
 }
